@@ -8,7 +8,7 @@ The array will increase or decrease in size when:
 2. there is *threshold* number of empty slots at the front of the array
 
 
-QuickList Methods
+### QuickList Methods
 =================
 
 | Method | Description |
