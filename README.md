@@ -1,5 +1,7 @@
 # quicklist
 
+** WORK IN PROGRESS **
+
 QuickList is an array with Amoratized O(1) shift and unshift, with more control over when to expand/shrink the size of the array by providing a **resize threshold**. The default resize threshold is **50**.
 
 The array will increase or decrease in size when:
