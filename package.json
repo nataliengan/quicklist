@@ -4,7 +4,7 @@
   "description": "",
   "main": "src/quicklist.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha test/test.js -w"
   },
   "repository": {
     "type": "git",
@@ -22,5 +22,9 @@
     "url": "https://github.com/nataliengan/quicklist/issues"
   },
   "homepage": "https://github.com/nataliengan/quicklist#readme",
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0"
+  }
 }
