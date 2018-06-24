@@ -1,7 +1,5 @@
 # quicklist
 
-***WORK IN PROGRESS***
-
 QuickList is an array with Amoratized O(1) shift and unshift, with more control over when to expand/shrink the size of the array by providing a **resize threshold**. The default resize threshold is **50**.
 
 The array will increase or decrease in size when:
@@ -10,8 +8,42 @@ The array will increase or decrease in size when:
 2. there is *threshold* number of empty slots at the front of the array
 
 
-QuickList Methods
-=================
+## Installing
+
+```
+npm install quicklist
+```
+
+## API
+
+```javascript
+const QuickList = require("quicklist");
+
+let myList = new QuickList();
+
+// Adding to back of list
+myList.push("foo");
+
+// Adding to front of list
+myList.unshift("bar");
+
+// Get element by index
+myList.get(0); // "bar"
+myList.get(1); // "foo"
+
+console.log(list.length()); // 2
+
+// Removing from back
+console.log(list.pop()); // "foo"
+
+// Removing from front
+console.log(list.shift()); // "bar"
+
+
+```
+
+## QuickList Methods
+
 
 | Method | Description |
 | ------- | ------------ |
