@@ -108,10 +108,10 @@ QuickList.prototype.length = function() {
  *	Creates a new array with the results of calling a provided function 
  * 	on every element in the array
  *	@param  {function} fn  	The function that executes on each element
- *	@return {object}  		The result array
+ *	@return {object}  		The result QuickList with function called on each elements
  */
 QuickList.prototype.map = function (fn) {
-	let mappedList = [];
+	let mappedList = new QuickList(this._threshold);
 
 	for (let i = this._head; i < this._list.length; i++) {
 		let elem = this._list[i];
@@ -138,10 +138,10 @@ QuickList.prototype.forEach = function(fn) {
  *	Creates a new array with all elements that pass the test implemented 
  *	by the provided function
  *	@param  {function} fn  	The function that tests each element
- *	@return {object}  		The result array
+ *	@return {object}  		The result QuickList with filtered elements
  */
 QuickList.prototype.filter = function(fn) {
-	let filterList = [];
+	let filterList = new QuickList(this._threshold);
 
 	for (let i = this._head; i < this._list.length; i++) {
 		let elem = this._list[i];
@@ -159,7 +159,7 @@ QuickList.prototype.filter = function(fn) {
  * 	in the array to reduce it to a single value
  *	@param  {function} fn  		The function that applies element with accumulator
  *	@param 	{any} initialVal  	The initial value
- *	@return {object}  			The result array
+ *	@return {any}  				The result value from accumulating/folding all the elements
  */
 QuickList.prototype.reduce = function(fn, initialVal) {
 	let acc = initialVal;

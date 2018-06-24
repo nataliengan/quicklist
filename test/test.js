@@ -142,10 +142,12 @@ describe('map()', function() {
 			return elem + 1;
 		});
 
+		expect(actualList._threshold).to.equal(50);
 		let expectedAns = 1;
-		for (let i = 0; i < actualList; i++) {
-			expect(actualList[i]).toEqual(expectedAns++);
-		}
+		
+		actualList.forEach(function(elem) {
+			expect(elem).to.equal(expectedAns++);
+		});
 	});
 });
 
@@ -165,9 +167,12 @@ describe('filter()', function() {
 			return elem & 1 === 0;
 		});
 
-		for (let i = 0; i < actualList; i++) {
-			expect(actualList[i] % 2 === 0).to.be.true;
-		}
+		expect(actualList._threshold).to.equal(50);
+		let expectedAns = 1;
+		
+		actualList.forEach(function(elem) {
+			expect(elem % 2 === 0).to.be.true;
+		});
 	});
 });
 
