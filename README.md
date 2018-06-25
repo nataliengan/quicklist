@@ -2,10 +2,10 @@
 
 QuickList is an array with Amoratized O(1) shift and unshift, with more control over when to expand/shrink the size of the array by providing a **resize threshold**. The default resize threshold is **50**.
 
-The array will increase or decrease in size when:
+The array size will:
 
-1. there is no empty space at the front of the array
-2. there is *threshold* number of empty slots at the front of the array
+1. increase when there is no empty space at the front of the array
+2. decrease when there is *threshold* number of empty slots at the front of the array
 
 
 ## Installing
@@ -31,13 +31,13 @@ myList.unshift("bar");
 myList.get(0); // "bar"
 myList.get(1); // "foo"
 
-console.log(list.length()); // 2
+console.log(myList.length()); // 2
 
 // Removing from back
-console.log(list.pop()); // "foo"
+console.log(myList.pop()); // "foo"
 
 // Removing from front
-console.log(list.shift()); // "bar"
+console.log(myList.shift()); // "bar"
 
 
 ```
